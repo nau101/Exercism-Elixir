@@ -6,7 +6,7 @@ defmodule WordCount do
   """
   @spec count(String.t()) :: map
   def count(sentence) do
-    words = String.replace(sentence,~r/(?=[^\w-]|$)[\p{P}\p{S}]/," ")
+    words = String.replace(sentence,~r/(?=[^\w-\p{L}])[\p{P}\p{S}]/u," ")
     |> String.replace(~r/[_]/, " ")
     |> String.downcase()
     |> String.split(~r{\s} , trim: true)
