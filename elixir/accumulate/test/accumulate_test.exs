@@ -5,12 +5,12 @@ defmodule AccumulateTest do
     assert Accumulate.accumulate([], fn n -> n * n end) == []
   end
 
-  @tag :pending
+ # @tag :pending
   test "accumulate square numbers" do
     assert Accumulate.accumulate([1, 2, 3], fn n -> n * n end) == [1, 4, 9]
   end
 
-  @tag :pending
+  #@tag :pending
   test "accumulate upcased strings" do
     fun = fn w -> String.upcase(w) end
     assert Accumulate.accumulate(["hello", "world"], fun) == ["HELLO", "WORLD"]

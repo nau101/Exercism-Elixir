@@ -17,6 +17,8 @@ defmodule Accumulate do
 
   @spec accumulate(list, (any -> any)) :: list
   def accumulate(list, fun) do
-    
+  list
+  |> Enum.reduce([], fn x, acc -> [fun.(x) | acc] end)
+  |> Enum.reverse()
   end
 end
