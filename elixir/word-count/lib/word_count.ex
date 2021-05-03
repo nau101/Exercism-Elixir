@@ -10,7 +10,6 @@ defmodule WordCount do
     |> String.downcase()
     |> String.split(~r/(?=[^w-])[[:punct:]\s]+/u , trim: true) # (?=[^w-]) excludes hyphen(-) from [:punct:]
     |> Enum.frequencies()
-
   end
 
 
