@@ -6,15 +6,14 @@ defmodule WordCount do
   """
   @spec count(String.t()) :: map
   def count(sentence) do
-    words = String.downcase(sentence)
+    sentence
+    |> String.downcase()
     |> String.split(~r/(?=[^w-])[[:punct:]\s]+/u , trim: true) # (?=[^w-]) excludes hyphen(-) from [:punct:]
-    Enum.reduce(words, %{}, fn x,acc -> Map.put(acc,x,occurs(words,x)) end)
+    |> Enum.frequencies()
 
   end
 
-  defp occurs(words,word) do
-      Enum.count(words, fn x -> x === word end)
-  end
+
 
 
 end
