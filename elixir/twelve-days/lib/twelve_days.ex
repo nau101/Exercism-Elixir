@@ -1,14 +1,29 @@
 defmodule TwelveDays do
+@gifts "Drummers Drumming, Pipers Piping, Lords-a-Leaping, Ladies Dancing, Maids-a-Milking, Swans-a-Swimming, Geese-a-Laying, Gold Rings, Calling Birds, French Hens, Turtle Doves, a Partridge in a Pear Tree."
+  @days %{1 => "first",
+         2 => "second",
+         3 => "third",
+         4 => "fourth",
+         5 => "fifth",
+         6 => "sixth",
+         7 => "seventh",
+         8 => "eigth",
+         9 => "ninth",
+         10 => "tenth",
+         11 => "eleventh",
+         12 => "twelfth"
+        }
 
-  @days " Drummers Drumming, Pipers Piping, Lords-a-Leaping, Ladies Dancing, Maids-a-Milking, Swans-a-Swimming, Geese-a-Laying, Gold Rings, Calling Birds, French Hens, Turtle Doves, and a Partridge in a Pear Tree. "
   @doc """
   Given a `number`, return the song's verse for that specific day, including
   all gifts for previous days in the same line.
   """
   @spec verse(number :: integer) :: String.t()
   def verse(number) do
-   @days
-
+   sorted_gifts = @gifts
+   |> String.split(~r/[[:punct:]]\s/)
+   |> Enum.reverse()
+   "On the #{@days[number]} day of Christmas my true love gave to me: #{Enum.fetch!(sorted_gifts,0)}"
 
   end
 
@@ -18,6 +33,7 @@ defmodule TwelveDays do
   """
   @spec verses(starting_verse :: integer, ending_verse :: integer) :: String.t()
   def verses(starting_verse, ending_verse) do
+
   end
 
   @doc """
@@ -25,5 +41,7 @@ defmodule TwelveDays do
   """
   @spec sing() :: String.t()
   def sing do
+
   end
+
 end
