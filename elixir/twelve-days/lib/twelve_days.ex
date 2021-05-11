@@ -1,5 +1,5 @@
 defmodule TwelveDays do
-@gifts "Drummers Drumming, Pipers Piping, Lords-a-Leaping, Ladies Dancing, Maids-a-Milking, Swans-a-Swimming, Geese-a-Laying, Gold Rings, Calling Birds, French Hens, Turtle Doves, a Partridge in a Pear Tree."
+@gifts "twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree"
   @days %{1 => "first",
          2 => "second",
          3 => "third",
