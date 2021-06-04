@@ -23,8 +23,9 @@ defmodule TwelveDays do
    sorted_gifts = @gifts
    |> String.split(~r/[[:punct:]]\s/)
    |> Enum.reverse()
+   
    "On the #{@days[number]} day of Christmas my true love gave to me: #{Enum.fetch!(sorted_gifts,0)}"
-
+    
   end
 
   @doc """
@@ -41,7 +42,7 @@ defmodule TwelveDays do
   """
   @spec sing() :: String.t()
   def sing do
-
+    
   end
 
 end

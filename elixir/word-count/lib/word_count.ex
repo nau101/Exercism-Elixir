@@ -12,7 +12,4 @@ defmodule WordCount do
     |> Enum.frequencies()
   end
 
-
-
-
 end
