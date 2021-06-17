@@ -46,8 +46,8 @@ defmodule TwelveDays do
   """
   @spec verses(starting_verse :: integer, ending_verse :: integer) :: String.t()
   def verses(starting_verse, ending_verse) do
-      range = starting_verse..ending_verse #stream
-      Enum.reduce(range,"", fn x,acc -> acc <>
+      starting_verse..ending_verse #stream [1..10]
+      |> Enum.reduce("", fn x,acc -> acc <>
               ~s"""
               #{verse(x)}
               """
