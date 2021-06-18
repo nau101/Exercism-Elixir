@@ -6,12 +6,12 @@ defmodule ScrabbleTest do
     assert Scrabble.score("") == 0
   end
 
-  @tag :pending
+  #@tag :pending
   test "whitespace scores zero" do
     assert Scrabble.score(" \t\n") == 0
   end
 
-  @tag :pending
+  #@tag :pending
   test "scores very short word" do
     assert Scrabble.score("a") == 1
   end

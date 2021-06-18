@@ -16,7 +16,7 @@ defmodule Scrabble do
   @doc """
    Creating a new map of letter(key) to score(value) map.
 
-    seed_map = %{"A => 1, "B" => 1 ..etc}
+    seed_map = %{"A" => 1, "B" => 1 ..etc}
 
   """
   def seed_map do
