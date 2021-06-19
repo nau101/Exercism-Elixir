@@ -14,13 +14,14 @@ defmodule Sublist do
       a == b -> :equal
       a == [] and b == [nil] -> :sublist
       a == [nil] and b == [] -> :superlist
-      count_a < count_b and for x <- a , x === b, do: "sublist" -> :sublist
-      count_a > count_b and for x <- a , x === b, do: "superlist" -> :superlist
-      count_a < count_b and for x <- a , x !== b, do: "unequal" -> :unequal
-
-
+      count_a < count_b and check_list(a,b) -> :sublist
       a != b -> :unequal
     end
+  end
+
+  defp check_list(a,b) do
+    for x <- a , x === b, do: :sublist
+    |> Enum.filter(fn x )
 
   end
 end
