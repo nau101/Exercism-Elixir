@@ -26,6 +26,4 @@ defmodule Scrabble do
           |> Enum.map(&Map.fetch!(@scores_map,&1))
           |> Enum.sum
   end
-
-
 end
